@@ -39,6 +39,8 @@ class button extends StatelessWidget {
           )
           ),
           SizedBox(height: 50,),
+
+
           SizedBox(
             height: 150,
           width: 150,
@@ -51,7 +53,7 @@ class button extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15)
                   )
               ),
-              onPressed: (){}, child:Text('Press',
+              onPressed: (){}, child:Text('Submit',
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -76,8 +78,45 @@ class button extends StatelessWidget {
             size:60,
           color: Colors.greenAccent,
           )
-          )
+          ),
+          GestureDetector(
+            onLongPress: (){
+              print('Taped on long press');
+            },
+            onDoubleTap: (){
+              print('Double Taped');
+            },
+            onTap: (){
+              print('Taped here');
+            },
+          child: Text('Click Here',
+          style: TextStyle(
+            fontSize: 30
+          ),
+          ),
+          ),
+
+          InkWell(
+            onTap: (){
+              print('On Tap in inkwell');
+            },
+          child: Text('Click Here Also',
+            style: TextStyle(
+                fontSize: 30
+            ),
+          ),
+          ),
         ],
+      ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightGreenAccent,
+        foregroundColor: Colors.black,
+        onPressed: (){
+        print('Click on Add');
+        },
+      child: Icon(Icons.add,
+      //color: Colors.cyanAccent,
       ),
       ),
     );
