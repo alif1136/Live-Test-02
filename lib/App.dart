@@ -1,7 +1,7 @@
 import 'package:alif/Button.dart';
 //import 'package:alif/Home%20page.dart';
 import 'package:flutter/material.dart';
-import 'package:alif/Home page.dart';
+import 'package:alif/home.dart';
 import 'package:alif/Input.dart';
 
 class myapp extends StatelessWidget{
@@ -13,7 +13,7 @@ class myapp extends StatelessWidget{
       title: 'My App',
       home: Input(),
       //home: button(),
-      //home: home(),
+      //home: Home(),
     );
   }
 }
